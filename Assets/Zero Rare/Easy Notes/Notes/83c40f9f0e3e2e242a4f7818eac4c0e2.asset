@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1693034297, guid: bb598dd41675c6348bee385a9e8c25bd, type: 3}
+  m_Name: 83c40f9f0e3e2e242a4f7818eac4c0e2
+  m_EditorClassIdentifier: 
+  id: -1
+  newId: 83c40f9f0e3e2e242a4f7818eac4c0e2
+  order: 0
+  note: 'TODO:
+
+
+    Add animations to skills
+
+    Add post-skill event
+
+    Change capsule to humanoid
+
+    Add first class
+
+    Add skills
+
+    Add runes for skills
+
+    Add XP/Levelling system
+
+    Add equipment / stats
+
+    Add passives to equipment
+
+    Add set bonuses
+
+    Detect fight win/loss'
+  tags: todo
+  color: {r: 1, g: 1, b: 1, a: 1}
+  show: 1

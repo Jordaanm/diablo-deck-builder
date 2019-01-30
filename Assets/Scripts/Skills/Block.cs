@@ -12,6 +12,7 @@ public class Block : Skill {
 
     public override void Activate(GameUnit source, List<GameUnit> targets) {
         Debug.Log("Activate Block");
+        source.GetComponent<Animator>().SetBool("helloTrigger", true);
         source.Shield += 5;
     }
 }

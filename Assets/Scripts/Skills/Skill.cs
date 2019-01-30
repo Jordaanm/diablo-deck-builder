@@ -41,4 +41,8 @@ public abstract class Skill {
 
     public abstract void Activate(GameUnit source, List<GameUnit> targets);
 
+    public void PostOutcome(List<OutcomeUnitSummary> outcomes) {
+        Debug.Log("PostOutcome");
+    }
+
 }

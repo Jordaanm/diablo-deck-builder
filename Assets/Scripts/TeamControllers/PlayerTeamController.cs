@@ -77,7 +77,7 @@ public class PlayerTeamController : TeamController {
         }
     }
     
-    private void EnactSkill(Skill skill, GameUnit source, List<GameUnit> targets) {
+    private void Enact(Skill skill, GameUnit source, List<GameUnit> targets) {
         skill.Activate(source, targets);
         activeSkill = null;
     }
@@ -86,7 +86,7 @@ public class PlayerTeamController : TeamController {
         Debug.Log("Setting Active Skill: " + skill.Name);
         activeSkill = skill;
         skill.SkillController
-            .SetCallback(this.EnactSkill)
+            .SetCallback(this.Enact)
             .OnSkillSelected();
     }
 

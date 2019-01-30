@@ -12,8 +12,10 @@ public class Attack : Skill {
 
     public override void Activate(GameUnit source, List<GameUnit> targets) {
         Debug.Log("Activate Attack");
+        
+        source.GetComponent<Animator>().SetBool("swordStrikeTrigger", true);
 
-        foreach(GameUnit target in targets) {
+        foreach (GameUnit target in targets) {
             target.TakeDamage(1);
         }
     }

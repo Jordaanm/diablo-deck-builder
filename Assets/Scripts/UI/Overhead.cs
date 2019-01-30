@@ -29,10 +29,14 @@ public class Overhead : MonoBehaviour {
 
         //Position above target
         MeshRenderer mr = target.GetComponent<MeshRenderer>();
+        SkinnedMeshRenderer smr = target.GetComponent<SkinnedMeshRenderer>();
+
         Vector3 basePosition = target.transform.position;
         float top = 0f;
         if (mr != null) {
-           top = mr.bounds.max.y;
+            top = mr.bounds.max.y;
+        } else if (smr != null) {
+            top = smr.bounds.max.y;
         } else {
             top = basePosition.y;
         }

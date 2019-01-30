@@ -11,7 +11,8 @@ public class GameUnit: MonoBehaviour {
         PET,
         MINION
     };
-    
+
+    public GameObject body;
     public UnitType m_unitType;
     public List<Skill> skills;
 
@@ -46,11 +47,12 @@ public class GameUnit: MonoBehaviour {
         skills = new List<Skill>();
         skills.Add(new Attack(this));
         skills.Add(new Block(this));
+        skills.Add(new ShieldShatter(this));
     } 
 
     private GameObject createHealthBar() {
         GameObject healthBar = (GameObject)Instantiate(Resources.Load("Unit Health"));
-        healthBar.GetComponent<Overhead>().target = gameObject;
+        healthBar.GetComponent<Overhead>().target = body != null ? body : gameObject;
         healthBar.GetComponent<HealthDisplay>().unit = this;
 
         Canvas canvas = GameObject.FindObjectOfType<Canvas>();
